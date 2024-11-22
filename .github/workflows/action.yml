@@ -28,7 +28,7 @@ jobs:
       # Extract artifacts from the container
       - name: Copy Artifacts
         run: |
-          docker cp dotnet-build:/opt/dotnet/artifacts ./artifacts
+          docker cp dotnet-build:/opt/dotnet/artifacts/x64/Release/ ./artifacts
           docker stop dotnet-build
           docker rm dotnet-build
 
